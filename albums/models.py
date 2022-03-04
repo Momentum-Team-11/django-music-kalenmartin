@@ -2,8 +2,8 @@ from django.db import models
 from datetime import datetime
 
 
-class Artist(models.Model):
-    artist = models.CharField(max_length=300)
+# class Artist(models.Model):
+#     artist = models.CharField(max_length=300)
 
 
 class Album(models.Model):

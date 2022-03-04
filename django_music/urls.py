@@ -22,5 +22,4 @@ urlpatterns = [
     # path('', views.home, name='home'),
     path('', album_views.album_list, name='album_list'),
     # path('', include('___.urls')),
-    path()
     ]

@@ -8,5 +8,5 @@ from datetime import datetime
 
 class Album(models.Model):
     title = models.CharField(max_length=300)
-    artist = models.CharField(max_length=300)
+    # artist = models.CharField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=datetime.now)

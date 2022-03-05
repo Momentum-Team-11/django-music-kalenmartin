@@ -2,9 +2,10 @@
 {% block content %}
 
 <h1>Album List</h1>
-
+    {% for album in albums%}
 <h2><a href="{% url 'album_list' pk=album.pk %}">{{ album.title }}</a></h2>
-<h2>{{ album.artist }}</h2>
-<ul>{{album.created_at}}</ul>
+<!-- <h2>{{ album.artist }}</h2> -->
+<!-- <ul>{{album.created_at}}</ul> -->
 
+{% endfor %}
 {% endblock %}

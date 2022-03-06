@@ -1,12 +1,11 @@
 from django.db import models
-from datetime import datetime
 
 
 
 class Album(models.Model):
     title = models.CharField(max_length=300)
     artist = models.CharField(max_length=300)
-    created_at = models.DateTimeField(auto_now_add=datetime.now)
+    created_at = models.DateTimeField(null=True, blank=True)
     
     def __str__(self):
         return self.title

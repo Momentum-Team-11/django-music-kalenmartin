@@ -12,8 +12,8 @@ def album_list(request):
 def album_detail(request, pk):
     album  = get_object_or_404(Album, pk=pk)
     form = AlbumForm()
-    return render (request,"albums/album_detail.html",
-        {"album":album, "pk":pk, "form":form},
+    return render (request,"album_detail.html",
+        {"album":album, "form":form},
     )
 
 def album_add(request):
@@ -23,8 +23,8 @@ def album_add(request):
         form = AlbumForm(data=request.POST)
         if form.is_valid():
             form.save()
-            return redirect(to='album_add')
+            return redirect(to='album_list')
 
-    return render(request, "albums/album_add.html",
+    return render(request, "album_add.html",
         {"form":form}
     )

@@ -1,10 +1,11 @@
-from django.urls import path
-from . import views as albums_views
+from django.urls import path, include
+from albums import views as albums_views
 
 urlpatterns = [
     path('', albums_views.album_list, name='album_list'),
     path('albums/<int:pk>/', albums_views.album_detail, name="album_detail"),
-    path('albums/album_add', albums_views.album_add, name='album_add'),
+    path('albums/add/', albums_views.album_add, name='album_add'),
+    # path('albums/<int:pk>/album/', albums_views.album_add, name='album_add'),
 ]
 
 

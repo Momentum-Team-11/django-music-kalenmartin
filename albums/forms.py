@@ -10,8 +10,3 @@ class AlbumForm(forms.ModelForm):
             'artist',
             'created_at',
         ]
-
-# class ArtistForm(forms.ModelForm):
-#     class Meta:
-#         model = Artist
-#         fields = ['artist']

@@ -6,9 +6,9 @@
 <div class="content">
 {% for album in albums %}
     <div class="box">
-    <h3> {{ album.title }}</h3>
-        <p> {{ created_at }}</p>
-
+        <h3> {{ album.title }}</h3>
+        <p> {{ album.artist }} </p>
+        <p> {{ album.created_at }}</p>
     </div>
     
 {% endfor %}

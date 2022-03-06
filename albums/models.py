@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from django.conf import settings
 
 
 class Artist(models.Model):
@@ -11,9 +12,9 @@ class Album(models.Model):
     artist = models.CharField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=datetime.now)
 
-    def publish(self):
-        self.published_date=datetime()
-        self.save()
+    # def publish(self):
+    #     self.published_date=datetime()
+    #     self.save()
         
     def __str__(self):
         return self.title

@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from albums import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('albums.urls')),
+    path('', views.album_list, name='album_list'),
+    path('arists/<in:pk>/album/', views.album_add, name='album_add'),
     ]
 
 

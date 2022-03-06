@@ -1,13 +1,12 @@
 # from socket import fromshare
 from django import forms
-from .models import Album
+from .models import album
+# from attr import fields
 
 class AlbumForm(forms.ModelForm):
     class Meta:
-        model = Album
-        field = ['title']
-        field = ['artist']
-        field = ['created_at']
+        model = album
+        fields = ['title','artist', 'created_at']
 
 # class ArtistForm(forms.ModelForm):
 #     class Meta:

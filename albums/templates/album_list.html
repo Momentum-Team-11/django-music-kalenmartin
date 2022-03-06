@@ -6,12 +6,16 @@
 <div class="content">
 {% for album in albums %}
     <div class="detail_box">
-        <h3><a href="{% url 'album_detail' pk=album.pk}"></a> {{ album.title }}</h3>
+        <h3><a href="{% url 'album_detail' pk=album.pk %}"> {{ album.title }}</h3>
         <p> {{ album.artist }} </p>
         <p> {{ album.created_at }}</p>
     </div>
-{% endfor %}
+
+    <div class="edit_box">
+        <p><a href="{% url 'album_edit' pk=album.pk %}">Edit Album</p>
+    </div>
 </div>
+{% endfor %}
 <div class="add_box">
     <p><a href="{% url 'album_add' %}">Add New Album</p>
 </div>

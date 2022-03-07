@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="title_header">Album List</h1>
+<h1 class="title_header">Kalen's Album List</h1>
 
 <div class="content">
+
+    <div class="add_box">
+        <p><a href="{% url 'album_add' %}">Add New Album</p>
+    </div>
+
 {% for album in albums %}
+<div class="album_deets">
     <div class="detail_box">
         <h3><a href="{% url 'album_detail' pk=album.pk %}"> {{ album.title }}</h3>
         <p> {{ album.artist }} </p>
@@ -15,12 +21,10 @@
         <p><a href="{% url 'album_edit' pk=album.pk %}">Edit Album</p>
     </div>
     <div class="delete_box">
-        <p><a href="{% url 'album_delete' pk=album.pk %}">Delete Album</p>
+        <p><a href="{% url 'album_delete' pk=album.pk %}">Delete Album</p><br>
     </div>
 </div>
-{% endfor %}
-<div class="add_box">
-    <p><a href="{% url 'album_add' %}">Add New Album</p>
 </div>
+{% endfor %}
 
 {% endblock %}

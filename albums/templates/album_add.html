@@ -6,7 +6,7 @@
     <form action="{% url 'album_add' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <div>
+    <div class="new_button">
         <button type="submit">Add New Album</button>
     </div>
     </form>

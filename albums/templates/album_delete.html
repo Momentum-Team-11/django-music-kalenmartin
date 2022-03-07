@@ -4,12 +4,12 @@
 <h1>Delete Album</h1>
 
 <div>
-    <form action="{% url 'delete_album' pk=album.pk %}" method="POST">
+    <form action="{% url 'album_delete' pk=album.pk %}" method="POST">
     {% csrf_token %}
     <p>Delete this album? {{ album.title }}?</p>
 <div>
     <button type="submit">Delete Album</button><br />
-    <a href="{% url 'list_albums' %}">Cancel</a>
+    <a href="{% url 'album_list' %}">Cancel</a>
     </div>
     </form>
 </div>

@@ -6,7 +6,7 @@ urlpatterns = [
     path('albums/<int:pk>/', albums_views.album_detail, name="album_detail"),
     path('albums/add/', albums_views.album_add, name='album_add'),
     path('albums/<int:pk>/edit/', albums_views.album_edit, name='album_edit'),
-    # path('albums/<int:pk>/album/', albums_views.album_add, name='album_add'),
+    path('albums/<int:pk>/delete/', albums_views.album_delete, name='album_delete'),
 ]
 
 

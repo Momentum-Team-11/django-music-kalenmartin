@@ -14,6 +14,9 @@
     <div class="edit_box">
         <p><a href="{% url 'album_edit' pk=album.pk %}">Edit Album</p>
     </div>
+    <div class="delete_box">
+        <p><a href="{% url 'album_delete' pk=album.pk %}">Delete Album</p>
+    </div>
 </div>
 {% endfor %}
 <div class="add_box">
